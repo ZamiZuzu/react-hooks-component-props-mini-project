@@ -1,8 +1,10 @@
 import React from "react";
 
 function emojiHandler(minutes) {
-    const time = minutes < 30 ? 5 : 10;
-    const emoji = minutes < 30 ? "☕️" : "🍱";
+    // const time = minutes < 30 ? 5 : 10;
+    // const emoji = minutes < 30 ? "☕️" : "🍱";
+
+    const [time, emoji] = minutes < 30 ? [5, "☕️"] : [10, "🍱"];
 
     let emojis = "";
     for (let i = 0; i < minutes; i += time) {
